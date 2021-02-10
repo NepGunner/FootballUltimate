@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-12">
+        <ul class="list-group list-group-flush">
+            <span *ngIf="data != undefined && data.length > 0">
+                <li class="list-group-item p-0" *ngFor="let item of data;trackBy: trackByFn">
+                    <div class="d-flex">
+                        <div class="p-1 w-100 align-items-center text-center bg-light">
+                            {{item.date}}
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item clickable" *ngFor="let game of item.games"
+                            (click)="toResultEdit(game)">
+                            <div class="d-flex">
+                                <span class="text-right sectionA"
+                                    [ngClass]="{'winner':game.score1 > game.score2}">{{game.team1name}}</span>
+                                <span class="text-center sectionB">{{game.score1}} - {{game.score2}}</span>
+                                <span class="text-left sectionC"
+                                    [ngClass]="{'winner':game.score2 > game.score1}">{{game.team2name}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </span>
+            <span *ngIf="data != undefined && (data.length == 0) ">
+                <li class="list-group-item">
+                    <div>
+                        <i class="fa fa-info-circle p-2" aria-hidden="true"></i>&nbsp;&nbsp;No records found
+                    </div>
+                </li>
+            </span>
+        </ul>
+    </div>
+</div>

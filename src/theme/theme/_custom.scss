@@ -1,0 +1,42 @@
+.nav-pills .nav-link.active{
+  background-color: white;
+  color: #1d1d1d;
+  border-bottom: 3px solid darkorange;
+}
+
+.nav-item{
+  cursor: pointer;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: darkgrey;
+}
+
+
+.custom-toast .ui-toast-message {
+  border: 1px solid #dad55e;
+  background: #efd07a;
+  color: #4b4f57;
+  font-weight: 600;
+}
+
+.custom-toast .ui-toast-message div {
+  color: black;
+}
+
+.custom-toast .ui-toast-message.ui-toast-message-info .ui-toast-close-icon {
+  color: black;
+}
+
+.ui-toast .ui-toast-icon{
+  color: black;
+}
+
+.ui-toast .ui-toast-detail{
+  font-size: smaller;
+  font-weight: 400;
+}

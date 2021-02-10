@@ -1,0 +1,19 @@
+h1{
+    color: deeppink;
+    font-weight: 600;
+}
+
+.jumbotron{
+    background-image: url('/assets/img/header-bg.svg');
+    background-color: aquamarine;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lead{
+    display: inline-block;
+    background: #37003c78;
+    border-radius: 12px;
+    padding: 5px;
+    color: #fff;
+}

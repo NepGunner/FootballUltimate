@@ -1,0 +1,18 @@
+.winner{
+    color: green;
+    font-weight: 600;
+}
+
+.sectionA{
+    flex: 1 1 40%;
+}
+.sectionB{
+    flex: 1 1 20%;
+}
+.sectionC{
+    flex: 1 1 40%;
+}
+
+.clickable{
+    cursor: pointer;
+}

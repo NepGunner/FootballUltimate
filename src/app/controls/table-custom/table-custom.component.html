@@ -1,0 +1,26 @@
+<div class="table-responsive">
+<table class="table table-striped" [ngClass]="{'table-dark':mode == 'dark', 'table-sm': layout == 'collapsed'}" *ngIf="data != undefined">
+    <thead>
+      <tr>
+        <th scope="col" class="xsmall text-center">Position</th>
+        <th scope="col">Team</th>
+        <th scope="col" class="xsmall">Played</th>
+        <th scope="col" class="xsmall">Win</th>
+        <th scope="col" class="xsmall">Draw</th>
+        <th scope="col" class="xsmall">Loss</th>
+        <th scope="col" class="xsmall">Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data;let i = index;">
+        <th scope="row" class="xsmall text-center">{{i+1}}</th>
+        <td>{{item.name}}</td>
+        <td class="xsmall text-center">{{item.matchPlayed}}</td>
+        <td class="xsmall text-center">{{item.win}}</td>
+        <td class="xsmall text-center">{{item.draw}}</td>
+        <td class="xsmall text-center">{{item.loss}}</td>
+        <td class="xsmall text-center">{{item.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

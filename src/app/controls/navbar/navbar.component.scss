@@ -1,0 +1,16 @@
+/* Basic styling */
+* {
+    box-sizing: border-box;
+  }
+
+.today{
+  // background: white;
+  border-radius: 15px;
+  // box-shadow: 5px 2px 5px lightgrey, inset -2px -5px 5px #f9f9f9;
+  padding: 0.2rem 0.6rem;
+}
+
+.date{
+  font-size: smaller;font-weight: 700;color: lightgrey;
+}
+  

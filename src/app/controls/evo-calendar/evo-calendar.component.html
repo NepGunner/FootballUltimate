@@ -1,0 +1,6 @@
+<p-calendar [monthNavigator]="true"
+            [yearNavigator]="true"
+            [yearRange]="dateRange"
+            [ngModel]="value | evoDateStringToDate"
+            (ngModelChange)="value = convertDateToEvoDateString($event)"
+            dateFormat="dd-mm-yy"></p-calendar>

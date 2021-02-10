@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card" style="border: none;">
+      <div class="card-body">
+        <ul class="nav nav-pills mb-3" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" [ngClass]="{ 'active':activeTab==='Result'}" id="resultAll-tab" data-toggle="tab"
+              href="#resultAll" role="tab" aria-controls="resultAll" aria-selected="true"
+              (click)="setActiveTab('Result')">Results</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" [ngClass]="{ 'active':activeTab==='ResultAction'}" id="resultAction-tab"
+              data-toggle="tab" href="#resultAction" role="tab" aria-controls="resultAction" aria-selected="false"
+              (click)="setActiveTab('ResultAction')">Add/Edit Result</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" [ngClass]="{ 'active':activeTab==='Table'}" id="leagueTable-tab" data-toggle="tab"
+              href="#leagueTable" role="tab" aria-controls="leagueTable" aria-selected="false"
+              (click)="setActiveTab('Table')">Table</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane " [ngClass]="{ 'show active':activeTab==='Result'}" id="resultAll" role="tabpanel"
+            aria-labelledby="resultAll-tab">
+            <Result #Result></Result>
+          </div>
+          <div class="tab-pane" [ngClass]="{ 'show active':activeTab==='ResultAction'}" id="resultAction"
+            role="tabpanel" aria-labelledby="resultAction-tab">
+            <ResultAction #ResultAction></ResultAction>
+          </div>
+          <div class="tab-pane " [ngClass]="{ 'show active':activeTab==='Table'}" id="leagueTable" role="tabpanel"
+            aria-labelledby="leagueTable-tab">
+            <div class="row">
+              <div class="col-md-12">
+                <LeagueTable #LeagueTable></LeagueTable>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
