@@ -4,10 +4,10 @@ h1{
 }
 
 .jumbotron{
-    background-image: url('/assets/img/header-bg.svg');
-    background-color: aquamarine;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url('/assets/img/header-bg.svg'); */
+    background-color: #00e69952;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
 }
 
 .lead{
