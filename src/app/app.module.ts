@@ -30,7 +30,7 @@ import { DragulaService, DragulaModule } from 'ng2-dragula';
 import { EvoDateField } from './controls/evo-date-field/evo-date-field.component';
 // import {NavbarComponent} from './controls/navbar/navbar.component';
 import { EvoCalendar } from './controls/evo-calendar/evo-calendar.component';
-import { SpinnerComponent } from './controls/spinner/spinner.component';
+// import { SpinnerComponent } from './controls/spinner/spinner.component';
 // import {TableCustom} from './controls/table-custom/table-custom.component';
 
 // Services
@@ -77,7 +77,7 @@ import { SharedModule } from './pages/shared/shared.module';
   declarations: [
     AppComponent,
     // Controls
-    SpinnerComponent,
+    // SpinnerComponent,
     // NavbarComponent,
     EvoDateField,
     EvoCalendar,
