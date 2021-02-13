@@ -1,5 +1,5 @@
 import { Injectable, Output, EventEmitter, OnInit } from '@angular/core';
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AuthenticationService implements OnInit{
 
     @Output() actionChanged = new EventEmitter<any>(); 

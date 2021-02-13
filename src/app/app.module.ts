@@ -1,19 +1,19 @@
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from "../environments/environment";
 import { HttpClientModule } from '@angular/common/http';
 
-import {ButtonModule} from 'primeng/button';
-import {DialogModule} from 'primeng/dialog';
-import {CalendarModule} from 'primeng/calendar';
-import {MessagesModule} from 'primeng/messages';
-import {MessageModule} from 'primeng/message';
-import {ToastModule} from 'primeng/toast';
-import {MessageService} from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { CalendarModule } from 'primeng/calendar';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 
 import { NgxTypeaheadModule } from "ngx-typeahead";
@@ -22,9 +22,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 //directive module
-import {ClickOutsideModule} from './directives/clickoutside.module';
-import {PrimeDragulaModule} from './directives/primeDragula.module';
-import {DragulaService,DragulaModule } from 'ng2-dragula';
+import { ClickOutsideModule } from './directives/clickoutside.module';
+import { PrimeDragulaModule } from './directives/primeDragula.module';
+import { DragulaService, DragulaModule } from 'ng2-dragula';
 
 // Controls
 import { EvoDateField } from './controls/evo-date-field/evo-date-field.component';
@@ -53,7 +53,7 @@ import { EvoCurrencyPipeList2 } from './pipes/evo-currency-pipe-list2';
 import { StripHtmlPipe } from './pipes/strip-html-pipe';
 // Pages
 
-import {FootballHome} from './pages/FootballHome/FootballHome.component';
+import { FootballHome } from './pages/FootballHome/FootballHome.component';
 // import {LeagueTable} from './pages/LeagueTable/LeagueTable.component';
 // import {CptDet_LeagueTable_GET} from './pages/LeagueTable/CptDet_LeagueTable_GET.component';
 // import {CptLst_LeagueTable_LIST} from './pages/LeagueTable/CptLst_LeagueTable_LIST.component';
@@ -107,7 +107,7 @@ import { SharedModule } from './pages/shared/shared.module';
     // CptEdit_Result_PUT
     //popup
 
-    
+
   ],
   imports: [
     RouterModule,
@@ -128,9 +128,12 @@ import { SharedModule } from './pages/shared/shared.module';
 
     HttpClientModule,
     DragulaModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production,registrationStrategy: 'registerImmediately'  }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' }),
     SharedModule
-    
+
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
     AuthenticationService,

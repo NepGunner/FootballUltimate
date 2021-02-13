@@ -43,7 +43,5 @@ export class AppComponent implements OnInit {
       this.messages.push({ severity: notification.severity, summary: summary, detail: detail });
     });
   }
-  getTitle() {
-    return this.titleService.getTitle();
-  }
+  
 }
